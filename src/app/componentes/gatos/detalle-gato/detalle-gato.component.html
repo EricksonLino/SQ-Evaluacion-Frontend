@@ -1,0 +1,19 @@
+
+<div class="container home">
+  <div class="container-fluid text-center title under">
+    <h3>DETALLE DE GATO</h3>
+  </div>
+  <div class="row content">
+    <div class="card">
+      <div class="card-body">
+        <p><b>Nombre: </b>{{ gato.nombre }}</p>
+        <p><b>Imagen: </b>{{ gato.imagen }}</p>
+        <p><b>Descripcion: </b>{{ gato.descripcion }}</p>
+        <img [src]="gato.urlCompleta" width="300" height="300">
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <button type="button" class="btn btn-success" routerLink="/tabla-gatos">Regresar</button>
+  </div>
+</div>

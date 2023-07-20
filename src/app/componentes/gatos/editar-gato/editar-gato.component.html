@@ -1,0 +1,30 @@
+
+  <div class="container home">
+    <div class="container-fluid text-center title under">
+      <h3>EDITAR GATO</h3>
+    </div>
+    <div class="row content">
+      <div class="card">
+        <div class="card-body">
+          <div>
+            <label for="nombreGato">Nombre</label>
+            <input class="form-control" id="nombreGato" name="nombre" [(ngModel)]="gato.nombre"/>
+          </div>
+            <br />
+            <div>
+              <label for="descripcion">Descripción </label>
+              <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="gato.descripcion"></textarea>
+            </div>
+            <br />
+            <div>
+                <label for="imagen">Imagen </label>
+                <textarea class="form-control" id="imagen" name="imagen" [(ngModel)]="gato.imagen"></textarea>
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <button  class="buttonpr" type="button" class="btn btn-success" (click)="editarGato()">Guardar</button>
+      <button class="button" type="button" class="btn btn-primary" (click)="cancelar()" >Cancelar</button>  
+    </div>
+  </div>
