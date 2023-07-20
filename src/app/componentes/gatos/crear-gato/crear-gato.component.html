@@ -10,16 +10,20 @@
             <label for="nombre">Nombre</label>
             <input class="form-control" id="nombre" [(ngModel)]="nombre"/>
           </div>
-          <br />
+
           <div>
             <label for="descripcion">Descripción </label>
             <textarea class="form-control" id="descripcion" [(ngModel)]="descripcion"></textarea>
           </div>
-          <br />
+
           <div>
-            <label for="imagen">Imagen </label>
-            <textarea class="form-control" id="imagen" [(ngModel)]="imagen"></textarea>
+            <label for="Imagen">Imagen :</label>
+            <div class="input-group">
+              <input style="margin: auto;" type="file" class="form-control" id="inputGroupFile04" aria-describedby="Imagen" aria-label="Upload">
+              <button style="margin: auto;" class="btn btn-warning" type="button" id="Imagen">Cargar</button>
+            </div>
           </div>
+
         </div>        
       </div>
     </div>

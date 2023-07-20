@@ -10,16 +10,22 @@
             <label for="nombreGato">Nombre</label>
             <input class="form-control" id="nombreGato" name="nombre" [(ngModel)]="gato.nombre"/>
           </div>
-            <br />
+          
             <div>
               <label for="descripcion">Descripción </label>
               <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="gato.descripcion"></textarea>
             </div>
-            <br />
+           
             <div>
-                <label for="imagen">Imagen </label>
-                <textarea class="form-control" id="imagen" name="imagen" [(ngModel)]="gato.imagen"></textarea>
+              <label for="Imagen">Imagen :</label>
+              <div class="text-center">
+                <img [src]="gato.urlCompleta" width="200" height="200" >
               </div>
+              <div class="input-group mt-4">
+                <input style="margin: auto;" type="file" class="form-control" id="Imagen" aria-describedby="Imagen" aria-label="Upload">
+                <button style="margin: auto;" class="btn btn-warning" type="button" id="Imagen">Cargar</button>
+              </div>
+            </div>
         </div>
       </div>
     </div>

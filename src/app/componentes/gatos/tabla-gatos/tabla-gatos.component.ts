@@ -13,7 +13,7 @@ export class TablaGatosComponent {
 
   constructor(private gatosService: GatosService, private router:Router){
     this.getGatos();
-    this.uploadImagen();
+    // this.uploadImagen();
   }
 
   getGatos(){
@@ -26,13 +26,13 @@ export class TablaGatosComponent {
     })
   }
 
-  uploadImagen(){
-    this.gatosService.uploadImagen()
-    .subscribe((data)=> {
-      this.gatos = data;
-      console.log(data);
-    })
-  }
+  // uploadImagen(){
+  //   this.gatosService.uploadImagen()
+  //   .subscribe((data)=> {
+  //     this.gatos = data;
+  //     console.log(data);
+  //   })
+  // }
 
   detalle(id:number){
     this.router.navigate(['/tabla-gatos',id])

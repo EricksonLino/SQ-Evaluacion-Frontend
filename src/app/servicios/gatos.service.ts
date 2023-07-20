@@ -13,9 +13,9 @@ export class GatosService {
     return this.httpclient.get(`${this.urlBase}/api/gatos`)
   }
 
-  uploadImagen(){
-    return this.httpclient.get(`${this.urlBase}/images`)
-  }
+  // uploadImagen(){
+  //   return this.httpclient.get(`${this.urlBase}/images`)
+  // }
 
   getGatoPorId(id:number){
     return this.httpclient.get(`${this.urlBase}/api/gatos/${id}`);

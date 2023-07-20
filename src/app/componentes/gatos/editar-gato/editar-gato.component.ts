@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditarGatoComponent {
   gato: any = {};
+  urlBase: string = "http://serv03.sidequest.pe/images/";
 
   constructor(
     private router: ActivatedRoute,
@@ -23,6 +24,7 @@ export class EditarGatoComponent {
   getGatoPorId(id: number) {
     this.gatosService.getGatoPorId(id).subscribe((data: any) => {
       this.gato = data;
+      this.gato.urlCompleta = `${this.urlBase}${this.gato.imagen}`;
     });
   }
   editarGato() {
