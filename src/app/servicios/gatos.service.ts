@@ -2,35 +2,33 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GatosService {
-  // urlBase: string='http://serv03.sidequest.pe/api/gatos';
-  urlBase: string='http://serv03.sidequest.pe';
+  urlBase: string = 'http://serv03.sidequest.pe/api/';
 
-  constructor(private httpclient: HttpClient) { }
-  getGatos(){
-    return this.httpclient.get(`${this.urlBase}/api/gatos`)
+  constructor(private httpclient: HttpClient) {}
+  getGatos() {
+    return this.httpclient.get(`${this.urlBase}gatos`);
   }
 
-  // uploadImagen(){
-  //   return this.httpclient.get(`${this.urlBase}/images`)
-  // }
-
-  getGatoPorId(id:number){
-    return this.httpclient.get(`${this.urlBase}/api/gatos/${id}`);
+  uploadImagen(formData: FormData) {
+    return this.httpclient.post(`${this.urlBase}gatos/upload`, formData);
   }
 
-  crearGato(gato:any){
-    return this.httpclient.post(`${this.urlBase}/api/gatos`, gato);
+  getGatoPorId(id: number) {
+    return this.httpclient.get(`${this.urlBase}gatos/${id}`);
   }
 
-  editarGato(id: number, gato:any){
-    return this.httpclient.put(`${this.urlBase}/api/gatos/${id}`, gato);
+  crearGato(gato: any) {
+    return this.httpclient.post(`${this.urlBase}gatos`, gato);
   }
 
-  eliminarGato(id:number){
-    return this.httpclient.delete(`${this.urlBase}/api/gatos/${id}`);
+  editarGato(id: number, gato: any) {
+    return this.httpclient.put(`${this.urlBase}gatos/${id}`, gato);
   }
 
+  eliminarGato(id: number) {
+    return this.httpclient.delete(`${this.urlBase}gatos/${id}`);
+  }
 }

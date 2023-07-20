@@ -19,8 +19,8 @@
           <div>
             <label for="Imagen">Imagen :</label>
             <div class="input-group">
-              <input style="margin: auto;" type="file" class="form-control" id="inputGroupFile04" aria-describedby="Imagen" aria-label="Upload">
-              <button style="margin: auto;" class="btn btn-warning" type="button" id="Imagen">Cargar</button>
+              <input accept=".jpg,.png" (change)="upload($event)" style="margin: auto;" type="file" class="form-control" id="inputGroupFile04" aria-describedby="Imagen" aria-label="Upload">
+              <!-- <button style="margin: auto;" class="btn btn-warning" type="button" id="Imagen">Cargar</button> -->
             </div>
           </div>
 
